@@ -34,6 +34,7 @@
 		<!--[if IE 8]>
 	    	<script src="assets/js/selectivizr.js"></script>
 	    <![endif]-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	
 	<body>
@@ -114,7 +115,55 @@
 				</div>
 			</div><!-- header -->
 
-			
+
+			<!-- <div class="content-block parallax" id="services"> -->
+			<div class="content-block parallax" id="portfolio">
+				<div class="container text-center">
+					<header class="block-heading cleafix">
+						<h1>Marry Me Letters Cyprus</h1>
+					</header>
+					<section class="block-body">
+						<div class="row">
+							<!-- <div class="col-md-4">
+								<div class="service">
+									<i class="fa fa-send-o"></i>
+									<h2>Illustration</h2>
+									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="service">
+									<i class="fa fa-heart-o"></i>
+									<h2>3D Modeling</h2>
+									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="service">
+									<i class="fa fa-camera-retro"></i>
+									<h2>Ideal for internal and external places</h2>
+									<p>The size of each letter is 84x60, making them ideal for both internal and external places.</p>
+								</div>
+							</div> -->
+							<h3>Elevate your special moment with our "Marry Me" letters! Crafted from durable foam board, these 84x60 cm letters are perfect for both indoor and outdoor settings. Create an unforgettable backdrop for proposals, engagements, and other romantic occasions. Available for rent in Cyprus to make your declaration of love truly stand out!</h3>
+							<h3 class="secondary-slogan">
+								1 day: €130 
+							</h3>
+							<h3 class="secondary-slogan">
+								2 days: €180
+							</h3>
+							<h3 class="secondary-slogan">
+								3 days: €210
+							</h3>
+							<h3 class="secondary-slogan">
+								4 days: €230
+							</h3>
+							<p>Delivery cost is not included in the price</p>
+						</div>
+					</section>
+				</div>
+			</div>
+
 			<!-- <div class="content-block" id="portfolio">
 				<div class="container">
 					<header class="block-heading cleafix">
@@ -159,55 +208,7 @@
 						</div>
 					</section>
 				</div>
-			</div>#portfolio -->
-
-			<!-- <div class="content-block parallax" id="services"> -->
-			<div class="content-block parallax" id="portfolio">
-				<div class="container text-center">
-					<header class="block-heading cleafix">
-						<h1>Marry Me Letters Cyprus</h1>
-					</header>
-					<section class="block-body">
-						<div class="row">
-							<!-- <div class="col-md-4">
-								<div class="service">
-									<i class="fa fa-send-o"></i>
-									<h2>Illustration</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<i class="fa fa-heart-o"></i>
-									<h2>3D Modeling</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<i class="fa fa-camera-retro"></i>
-									<h2>Ideal for internal and external places</h2>
-									<p>The size of each letter is 84x60, making them ideal for both internal and external places.</p>
-								</div>
-							</div> -->
-							<h3>Elevate your special moment with our "Marry Me" letters! Crafted from durable foam board, these 84x60 cm letters are perfect for both indoor and outdoor settings. Create an unforgettable backdrop for proposals, engagements, and other romantic occasions. Available for rent in Cyprus to make your declaration of love truly stand out!</h3>
-							<h3 class="secondary-slogan">
-								1 day: €150 
-							</h3>
-							<h3 class="secondary-slogan">
-								2 days: €200
-							</h3>
-							<h3 class="secondary-slogan">
-								3 days: €230
-							</h3>
-							<h3 class="secondary-slogan">
-								up to 7 days: €250
-							</h3>
-							<p>Delivery cost is not included in the price</p>
-						</div>
-					</section>
-				</div>
-			</div>
+			</div> -->
 
 
 			<!-- <div class="content-block" id="blog">
@@ -301,7 +302,7 @@
 							<div class="col-md-6 col-md-offset-3">
 								<form class="" role="form">
 									<div class="form-group">
-								    	<input type="name" class="form-control form-control-white" id="subject" placeholder="Your Name" required>
+								    	<input type="name" class="form-control form-control-white" id="subject" placeholder="Enter name" required>
 								  	</div>
 								    <div class="form-group">
 								    	<input type="email" class="form-control form-control-white" id="exampleInputEmail2" placeholder="Enter email" required>
@@ -317,18 +318,174 @@
 										</select>
 									</div>
 									
+									<!-- Hidden by default - Question -->
+									<div class="form-group" id="questionFields" style="display: none;">
+										<div class="form-group">
+											<textarea class="form-control form-control-white" placeholder="Enter your question" required></textarea>
+										</div>		
+										<button type="submit" onclick="sendQuestion()" class="btn btn-primary">Send question</button>							
+									</div>
 									
+									<!-- Hidden by default - Reservation -->
+									<div id="reservationFields" style="display: none;">
+										<div class="form-group">
+											<input type="date" class="form-control form-control-white" id="date" placeholder="Select date" required>
+										</div>
+										<div class="form-group">
+											<select class="form-control form-control-white" id="duration" required style="color: white; background-color: transparent;">
+												<option value="" disabled selected>Select duration</option>
+												<option value="oneday" style="color: black;">1 day: €130</option>
+												<option value="twodays" style="color: black;">2 days: €190</option>
+												<option value="threedays" style="color: black;">3 days: €210</option>
+												<option value="fourdays" style="color: black;">4 days: €230</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<select class="form-control form-control-white" id="delivery" required style="color: white; background-color: transparent;">
+												<option value="" disabled selected>Select delivery method</option>
+												<option value="oneday" style="color: black;">I will pick up from Nicosia (spacious car required)</option>
+												<option value="nicosia" style="color: black;">Delivery in Nicosia: €30</option>
+												<option value="larnaca" style="color: black;">Delivery in Larnaca: €50</option>
+												<option value="famagusta" style="color: black;">Delivery in Famagusta: €80</option>
+												<option value="limassol" style="color: black;">Delivery in Limassol: €90</option>
+												<option value="paphos" style="color: black;">Delivery in Paphos: €170</option>
+												<option value="polis" style="color: black;">Delivery in Polis: €220</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<textarea class="form-control form-control-white" placeholder="Comments"></textarea>
+										</div>
+										<p>Total cost: €<span id="totalCost">0</span></p>
+										<button type="submit" onclick="sendReservation()" class="btn btn-primary">Send request</button>
+									</div>
+
+									<script>
+										function sendQuestion() {
+											const form = document.getElementById('myForm');
+											const formData = new FormData(form);
+											
+											fetch('http://localhost:3000/submitQuestion', {
+												method: 'POST',
+												body: JSON.stringify(Object.fromEntries(formData)),
+												headers: {
+													'Content-Type': 'application/json'
+												}
+											})
+											.then(response => {
+												if (response.ok) {
+													alert("Question sent!");
+												} else {
+													throw new Error('Question submission failed');
+												}
+											})
+											.catch(error => {
+												console.error('Error:', error);
+												alert("Question submission failed");
+											});
+										}
 									
-									<div class="form-group">
-								    	<input type="duration" class="form-control form-control-white" id="duration" placeholder="Select Duration" required>
-								    </div>
-									<div class="form-group">
-								    	<input type="delivery" class="form-control form-control-white" id="exampleInputEmail3" placeholder="Select delivery method" required>
-								    </div>
-								    <div class="form-group">
-								    	<textarea class="form-control form-control-white" placeholder="Comments"></textarea>
-								    </div>
-								  <input type="submit" class="btn btn-o-white" value="Send">
+										function sendReservation() {
+											const form = document.getElementById('myForm');
+											const formData = new FormData(form);
+
+											fetch('http://localhost:3000/submitReservation', {
+												method: 'POST',
+												body: JSON.stringify(Object.fromEntries(formData)),
+												headers: {
+													'Content-Type': 'application/json'
+												}
+											})
+											.then(response => {
+												if (response.ok) {
+													alert("Reservation request sent!");
+												} else {
+													throw new Error('Reservation request submission failed');
+												}
+											})
+											.catch(error => {
+												console.error('Error:', error);
+												alert("Reservation request submission failed");
+											});
+										}
+									</script>
+									
+									<script>
+										function calculateTotal() {
+											var durationSelect = document.getElementById('duration');
+											var deliverySelect = document.getElementById('delivery');
+											var durationCost = 0;
+											var deliveryCost = 0;
+									
+											switch (durationSelect.value) {
+												case 'oneday':
+													durationCost = 130;
+													break;
+												case 'twodays':
+													durationCost = 180;
+													break;
+												case 'threedays':
+													durationCost = 210;
+													break;
+												case 'fourdays':
+													durationCost = 230;
+													break;
+												default:
+													durationCost = 0;
+											}
+									
+											switch (deliverySelect.value) {
+												case 'oneday':
+													deliveryCost = 0;
+													break;
+												case 'nicosia':
+													deliveryCost = 30;
+													break;
+												case 'larnaca':
+													deliveryCost = 50;
+													break;
+												case 'famagusta':
+													deliveryCost = 80;
+													break;
+												case 'limassol':
+													deliveryCost = 90;
+													break;
+												case 'paphos':
+													deliveryCost = 170;
+													break;
+												case 'polis':
+													deliveryCost = 220;
+													break;
+												default:
+													deliveryCost = 0;
+											}
+									
+											var totalCost = durationCost + deliveryCost;
+											document.getElementById('totalCost').innerText = totalCost;
+										}
+									
+										// Calculate total cost when page loads
+										calculateTotal();
+									
+										// Add event listeners to recalculate total cost when select values change
+										document.getElementById('duration').addEventListener('change', calculateTotal);
+										document.getElementById('delivery').addEventListener('change', calculateTotal);
+									</script>
+
+									<script>
+										document.getElementById('inquiry_type').addEventListener('change', function () {
+											var inquiryType = this.value;
+											var questionFields = document.getElementById('questionFields');
+											var reservationFields = document.getElementById('reservationFields');
+
+											if (inquiryType === 'question') {
+												questionFields.style.display = 'block';
+												reservationFields.style.display = 'none';
+											} else if (inquiryType === 'reservation') {
+												questionFields.style.display = 'none';
+												reservationFields.style.display = 'block';
+											}
+										});
+									</script>
 								</form>
 							</div>
 						</div>
@@ -336,14 +493,70 @@
 				</div>
 			</div><!-- #contact -->
 
+			<div class="content-block parallax" id="portfolio">
+				<div class="container text-center">
+					<div class="col-xs-12 text-center">
+						<div style="font-size: 36px; text-align: center;">
+							<div class="mchange" style="margin-right: 100px; display: inline-block;">
+								<i class="fa fa-envelope"></i>
+								<span id="emailText" style="display: block;">dasd@hotmail.com</span>
+							</div>
+							<div class="mchange2" style="margin-right: 100px; display: inline-block;">
+								<i class="fa fa-phone"></i>
+								<span style="display: block;">99223344</span>
+							</div>
+							<div class="mchange2" style="margin-right: 100px; display: inline-block;">
+								<i class="fa fa-facebook"></i>
+								<span id="facebookText" style="display: block;">Marrymecyprus</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				document.querySelector('.fa-envelope').addEventListener('click', function() {
+					window.location.href = 'mailto:dasd@hotmail.com';
+				});
+			
+				document.querySelector('.fa-facebook').addEventListener('click', function() {
+					window.open('https://www.facebook.com/Marrymecyprus', '_blank');
+				});
+			
+				document.getElementById('emailText').addEventListener('click', function() {
+					window.location.href = 'mailto:dasd@hotmail.com';
+				});
+			
+				document.getElementById('facebookText').addEventListener('click', function() {
+					window.open('https://www.facebook.com/Marrymecyprus', '_blank');
+				});
+			</script>
+			<style>
+				@media only screen and (max-width: 767px) {
+					.content-block.parallax .container.text-center {
+						text-align: center; /* Center align content horizontally */
+					}
+					.mchange {
+						margin-top: 0px !important; /* Adjusted margin for mobile phones */
+						margin-right: 0px !important; /* Reset margin-right */
+						display: block; /* Ensure each block takes full width */
+						text-align: center; /* Center align each block */
+					}
+					.mchange2 {
+						margin-top: 40px !important; /* Adjusted margin for mobile phones */
+						margin-right: 0px !important; /* Reset margin-right */
+						display: block; /* Ensure each block takes full width */
+						text-align: center; /* Center align each block */
+					}
+				}
+			</style>
+
 			<div class="content-block" id="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-6">&copy; Copyright Marry Me Letters Cyprus 2024</div>
+						<div class="col-xs-12 text-center">&copy; Copyright Marry Me Letters Cyprus 2024</div>
 					</div>
 				</div>
-			</div><!-- #footer -->
-
+			</div>
 
 		</div><!--/#wrapper-->
 
