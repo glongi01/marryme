@@ -367,7 +367,7 @@
 											var phone = document.getElementById('phone').value;
 											var question = document.getElementById('question').value;
 											
-											fetch('http://localhost:3370/send_question', {
+											fetch('https://coparaskeva.com:3370/send_question', {
 												method: 'POST',
 												body: JSON.stringify({email, name, phone, question }),
 												headers: {
@@ -408,7 +408,7 @@
 											var comments = document.getElementById('comments').value;
 											var cost = '€'+calculateTotal();
 
-											fetch('http://localhost:3370/send_reservation', {
+											fetch('https://coparaskeva.com:3370/send_reservation', {
 												method: 'POST',
 												body: JSON.stringify({email, name, phone, date, duration, delivery, comments, cost}),
 												headers: {
